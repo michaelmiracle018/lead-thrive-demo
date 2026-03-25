@@ -1,0 +1,423 @@
+const team = [
+  {
+    name: 'Dora Wepia',
+    role: 'Founder & Executive Director ',
+    bio: '20+ years in public health and community development.',
+    image: team1,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Desmond',
+    role: 'Social Media Manager',
+    bio: 'Expert in cybersecurity education and youth programs.',
+    image: team2,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Patience Mercy Achambeh',
+    role: 'Communications, Fundraising & Secretary',
+    bio: 'Passionate about connecting with communities and building partnerships.',
+    image: team3,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Dorithy Morisum Salifu',
+    role: 'Administrative & Operations Lead',
+    bio: 'PhD in Social Sciences with focus on addiction studies.',
+    image: team4,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Wekuri Solonic',
+    role: 'Community Mobilization & Events Lead ',
+    bio: 'PhD in Social Sciences with focus on addiction studies.',
+    image: team5,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Seth',
+    role: 'Video Editor & Content Producer',
+    bio: 'PhD in Social Sciences with focus on addiction studies.',
+    image: team6,
+    linkedin: '#',
+    twitter: '#',
+  },
+  {
+    name: 'Mardiyah Bint Umar',
+    role: 'Youth Engagement & Field Programs Coordinator',
+    bio: 'PhD in Social Sciences with focus on addiction studies.',
+    image: team7,
+    linkedin: '#',
+    twitter: '#',
+  },
+];
+
+
+
+
+
+import { useState } from 'react';
+import { Layout } from '~/components/layout/layout';
+import { ImageLightbox } from '~/components/ui/image-lightbox';
+import { FloatingShapes, GlowCard, GradientText } from '~/components/ui/floating-shapes';
+import { AnimatedSection } from '~/hooks/use-scroll-animation';
+import { Camera, Filter, ZoomIn } from 'lucide-react';
+import { cn } from '~/lib/utils';
+
+// Import gallery images
+import youthSummit1 from '~/assets/gallery/youth-summit-1.jpg';
+import youthSummit2 from '~/assets/gallery/youth-summit-2.jpg';
+import youthSummit3 from '~/assets/gallery/youth-summit-3.jpg';
+import youthSummit4 from '~/assets/gallery/youth-summit-4.jpg';
+import youthSummit5 from '~/assets/gallery/youth-summit-5.jpg';
+import youthSummit6 from '~/assets/gallery/youth-summit-6.jpg';
+import youthSummitPoster1 from '~/assets/gallery/youth-summit-poster-1.jpg';
+import youthSummitPoster2 from '~/assets/gallery/youth-summit-poster-2.jpg';
+import drugAwareness1 from '~/assets/gallery/drug-awareness-1.jpg';
+import drugAwareness2 from '~/assets/gallery/drug-awareness-2.jpg';
+import drugAwareness3 from '~/assets/gallery/drug-awareness-3.jpg';
+import drugAwareness4 from '~/assets/gallery/drug-awareness-4.jpg';
+import drugAwareness5 from '~/assets/gallery/drug-awareness-5.jpg';
+import drugAwareness6 from '~/assets/gallery/drug-awareness-6.jpg';
+import drugAwareness7 from '~/assets/gallery/drug-awareness-7.jpg';
+import schoolOutreach1 from '~/assets/gallery/school-outreach-1.jpg';
+import schoolOutreach2 from '~/assets/gallery/school-outreach-2.jpg';
+import schoolOutreach3 from '~/assets/gallery/school-outreach-3.jpg';
+import schoolOutreach4 from '~/assets/gallery/school-outreach-4.jpg';
+import schoolOutreach5 from '~/assets/gallery/school-outreach-5.jpg';
+import schoolOutreach6 from '~/assets/gallery/school-outreach-6.jpg';
+import schoolOutreach7 from '~/assets/gallery/school-outreach-7.jpg';
+import schoolOutreach8 from '~/assets/gallery/school-outreach-8.jpg';
+import schoolOutreach9 from '~/assets/gallery/school-outreach-9.jpg';
+import schoolOutreach10 from '~/assets/gallery/school-outreach-10.jpg';
+import schoolOutreach11 from '~/assets/gallery/school-outreach-11.jpg';
+import schoolOutreach12 from '~/assets/gallery/school-outreach-12.jpg';
+import schoolOutreach13 from '~/assets/gallery/school-outreach-13.jpg';
+
+// Import existing campaign images
+import campaign1 from '~/assets/campaign-1.jpg';
+import campaign2 from '~/assets/campaign-2.jpg';
+import campaign3 from '~/assets/campaign-3.jpg';
+import campaign4 from '~/assets/campaign-4.jpg';
+import campaign5 from '~/assets/campaign-5.jpg';
+import campaign6 from '~/assets/campaign-6.jpg';
+import campaign7 from '~/assets/campaign-7.jpg';
+import campaign8 from '~/assets/campaign-8.jpg';
+import campaign9 from '~/assets/campaign-9.jpg';
+
+// Category name mapping
+const categoryNames: Record<string, string> = {
+  'youth-summit-2025': 'Youth Summit 2025',
+  'drug-awareness': 'Drug Awareness Campaign',
+  'school-outreach': 'School Outreach',
+};
+
+interface GalleryImage {
+  src: string;
+  title: string;
+  category: string;
+  date?: string;
+}
+
+const categories = [
+  { id: 'all', name: 'All Photos', icon: Camera },
+  { id: 'youth-summit-2025', name: 'Youth Summit 2025', icon: Filter },
+  { id: 'drug-awareness', name: 'Drug Awareness Campaign', icon: Filter },
+  { id: 'school-outreach', name: 'School Outreach', icon: Filter },
+];
+
+const galleryImages: GalleryImage[] = [
+  // Youth Summit 2025 - Global Goals to Local Action
+  {
+    src: youthSummit1,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummit2,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummit3,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummit4,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummit5,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummit6,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummitPoster1,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+  {
+    src: youthSummitPoster2,
+    title: 'Youth Summit 2025',
+    category: 'youth-summit-2025',
+    date: 'August 2025',
+  },
+
+  // Drug Awareness Campaign
+  {
+    src: drugAwareness1,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness2,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness3,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness4,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness5,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness6,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+  {
+    src: drugAwareness7,
+    title: 'Drug Awareness Campaign',
+    category: 'drug-awareness',
+    date: '2025',
+  },
+
+  // School Outreach
+  { src: schoolOutreach1, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach2, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach3, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach4, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach5, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach6, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach7, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach8, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach9, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach10, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach11, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach12, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: schoolOutreach13, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign1, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign2, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign3, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign4, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign5, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign6, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign7, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign8, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+  { src: campaign9, title: 'School Outreach', category: 'school-outreach', date: '2025' },
+];
+
+function GalleryCard({
+  image,
+  index,
+  onClick,
+}: {
+  image: GalleryImage;
+  index: number;
+  onClick: () => void;
+}) {
+  const categoryTitle = categoryNames[image.category] || image.title;
+
+  return (
+    <div
+      onClick={onClick}
+      className="group relative cursor-pointer overflow-hidden rounded-2xl bg-card aspect-square"
+    >
+      {/* Image with wave animation */}
+      <div className="w-full h-full overflow-hidden">
+        <img
+          src={image.src}
+          alt={categoryTitle}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:animate-wave"
+        />
+      </div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+
+      {/* Zoom Icon */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
+        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+          <ZoomIn className="w-6 h-6 text-white" />
+        </div>
+      </div>
+
+      {/* Content - Shows category name */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <p className="text-white font-semibold text-lg leading-tight">{categoryTitle}</p>
+        {image.date && <p className="text-white/70 text-sm mt-1">{image.date}</p>}
+      </div>
+
+      {/* Corner accent */}
+      <div className="absolute top-0 right-0 w-20 h-20 bg-linear-to-bl from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </div>
+  );
+}
+
+export default function Gallery() {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const filteredImages =
+    activeCategory === 'all'
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === activeCategory);
+
+  const lightboxImages = filteredImages.map((img) => ({
+    src: img.src,
+    title: categoryNames[img.category] || img.title,
+  }));
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 hero-gradient overflow-hidden">
+        <FloatingShapes variant="hero" />
+        <div className="container mx-auto px-4 relative z-10">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-primary-foreground/80 text-sm mb-6">
+                <Camera className="w-4 h-4" />
+                <span>Our Gallery</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-6">
+                Moments of{' '}
+                <GradientText className="from-secondary via-primary-foreground to-secondary">
+                  Impacts
+                </GradientText>{' '}
+              </h1>
+              <p className="text-xl text-primary-foreground/80">
+                Explore our journey through images - from youth summits to community outreach
+                programs, witness the change we're making together.
+              </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-8 bg-muted/30 border-b border-border sticky top-16 z-40 backdrop-blur-md">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={cn(
+                    'inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300',
+                    activeCategory === category.id
+                      ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25'
+                      : 'bg-card text-muted-foreground hover:bg-muted hover:text-foreground border border-border'
+                  )}
+                >
+                  <Icon className="w-4 h-4" />
+                  {category.name}
+                  {category.id !== 'all' && (
+                    <span
+                      className={cn(
+                        'ml-1 px-2 py-0.5 rounded-full text-xs',
+                        activeCategory === category.id ? 'bg-white/20' : 'bg-muted'
+                      )}
+                    >
+                      {galleryImages.filter((img) => img.category === category.id).length}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <AnimatedSection animation="fade-up">
+            <div className="mb-8 flex items-center justify-between">
+              <p className="text-muted-foreground">
+                Showing{' '}
+                <span className="font-semibold text-foreground">{filteredImages.length}</span>{' '}
+                photos
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {filteredImages.map((image, index) => (
+              <AnimatedSection key={index} animation="scale" delay={index * 50}>
+                <GalleryCard image={image} index={index} onClick={() => openLightbox(index)} />
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {filteredImages.length === 0 && (
+            <div className="text-center py-20">
+              <Camera className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
+              <p className="text-muted-foreground text-lg">No photos in this category yet.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      <ImageLightbox
+        images={lightboxImages}
+        initialIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
+    </Layout>
+  );
+}
