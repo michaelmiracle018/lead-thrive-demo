@@ -16,7 +16,7 @@ import Layout from '~/components/layout';
 import ScrollReveal from '~/components/scroll-reveal';
 import heroImg from '~/assets/hero-home.jpg';
 import eventImg from '~/assets/event-seminar.jpg';
-import eventFlyer from '~/assets/event-flyer-seminar.jpg';
+import eventFlyer from '~/assets/program-img/program-1.jpeg';
 import actBookImg from '~/assets/activity-book-discipleship.jpg';
 import actSeminarImg from '~/assets/activity-seminars.jpg';
 import actMentorImg from '~/assets/activity-mentoring.jpg';
@@ -122,9 +122,14 @@ export default function Index() {
             purpose—transforming every aspect of society with Kingdom values.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up opacity-0 [animation-delay:300ms]">
-            <Link to="/register" className="btn-gold">
+            <a
+              href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold"
+            >
               Join The Tribe <ArrowRight size={18} />
-            </Link>
+            </a>
             <Link to="/programs" className="btn-secondary-hero">
               Explore Programs <ChevronRight size={18} />
             </Link>
@@ -293,7 +298,7 @@ export default function Index() {
         <div className="container-main relative">
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto">
-              <span className="label-chip">Coming Soon</span>
+              {/* <span className="label-chip">Coming Soon</span> */}
               <h2 className="mt-4 text-3xl lg:text-5xl leading-[1.1] tracking-tight">
                 <span className="text-gradient-hero">Upcoming Events</span>
               </h2>
@@ -301,10 +306,10 @@ export default function Index() {
           </ScrollReveal>
 
           <ScrollReveal className="mt-14">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="card-glass p-6 lg:p-10 flex flex-col lg:flex-row gap-8 items-center">
                 {/* Event Flyer with overlay */}
-                <div className="w-full lg:w-72 shrink-0 relative group rounded-xl overflow-hidden">
+                <div className="w-full lg:w-1/2 shrink-0 relative group rounded-xl overflow-hidden">
                   <img
                     src={eventFlyer}
                     alt="The Maiden LeaDTribe Seminar Flyer"
@@ -317,21 +322,22 @@ export default function Index() {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                     <div className="flex flex-col items-center justify-center bg-gold text-forest-dark rounded-2xl px-6 py-4 shrink-0 pulse-ring">
-                      <span className="text-3xl font-display leading-none">11</span>
-                      <span className="text-sm font-semibold mt-1">April</span>
+                      <span className="text-3xl font-display leading-none">30</span>
+                      <span className="text-sm font-semibold mt-1">May</span>
                       <span className="text-xs font-medium">2026</span>
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-display text-cream">
-                        The Maiden <span className="text-gradient-hero">LeaDTribe Seminar</span>
+                      <h3 className="text-xl lg:text-xl font-display text-cream">
+                        🔥 CULTIVATING{' '}
+                        <span className="text-gradient-hero">THE GROWTH MINDSET</span>
                       </h3>
                       <div className="mt-2 flex flex-wrap gap-4 text-sm text-cream/60">
                         <span className="flex items-center gap-1.5">
-                          <Calendar size={16} /> April 11, 2026
+                          <Calendar size={16} /> May 30, 2026
                         </span>
-                        <span className="flex items-center gap-1.5">
+                        {/* <span className="flex items-center gap-1.5">
                           <GraduationCap size={16} /> BECE Graduates
-                        </span>
+                        </span> */}
                       </div>
                     </div>
                   </div>
@@ -340,18 +346,28 @@ export default function Index() {
                     into their God-given purpose. Join us for a transformative experience of
                     biblical teaching, leadership development, and community building.
                   </p>
-                  <Link to="/register" className="btn-gold mt-6 text-sm inline-flex">
+                  <a
+                    href="https://forms.office.com/r/3GJyhF2QaN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold mt-6 text-sm inline-flex"
+                  >
                     Register Now <ArrowRight size={16} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal className="mt-16 text-center">
-            <Link to="/register" className="btn-secondary-hero">
+            <a
+              href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary-hero"
+            >
               Join The Tribe Today <ArrowRight size={18} />
-            </Link>
+            </a>
           </ScrollReveal>
         </div>
       </section>

@@ -16,9 +16,14 @@ export default function Footer() {
               Join a community of Kingdom leaders making real impact.
             </p>
           </div>
-          <Link to="/register" className="btn-gold shrink-0">
+          <a
+            href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold shrink-0"
+          >
             Join The Tribe <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -59,12 +64,14 @@ export default function Footer() {
               Get Involved
             </h4>
             <div className="flex flex-col gap-3">
-              <Link
-                to="/register"
+              <a
+                href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm hover:text-gold transition-colors duration-300"
               >
                 Join The Tribe
-              </Link>
+              </a>
               <Link
                 to="/derrick-senyo-diaba"
                 className="text-sm hover:text-gold transition-colors duration-300"

@@ -74,8 +74,10 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link
-            to="/register"
+          <a
+            href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`ml-4 inline-flex items-center gap-2 rounded-xl px-6 py-2.5 text-sm font-semibold transition-all duration-300 active:scale-95 ${
               scrolled
                 ? 'bg-primary text-primary-foreground hover:bg-forest-light'
@@ -83,7 +85,7 @@ export default function Navbar() {
             }`}
           >
             Join The Tribe <ArrowRight size={15} />
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -118,13 +120,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/register"
+            <a
+              href="https://chat.whatsapp.com/FIXYLeEAllNGpSoHyDPu5R?mode=gi_t"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="btn-gold mt-4 text-center text-sm"
             >
               Join The Tribe <ArrowRight size={15} />
-            </Link>
+            </a>
           </div>
         </div>
       )}
