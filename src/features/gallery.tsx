@@ -4,41 +4,59 @@ import Layout from '~/components/layout';
 import PageHero from '~/components/page-hero';
 import ScrollReveal from '~/components/scroll-reveal';
 
-import seminarImg from '~/assets/seminar.jpg';
-import mentoringImg from '~/assets/mentoring.jpg';
-import summitImg from '~/assets/summit.jpg';
-import bookImg from '~/assets/book-reading.jpg';
-import communityImg from '~/assets/community.jpg';
-import corporateImg from '~/assets/corporate-training.jpg';
-import galleryComm from '~/assets/gallery-community.jpg';
-import gallerySchool from '~/assets/gallery-school.jpg';
-import galleryNetwork from '~/assets/gallery-networking.jpg';
-import actBookImg from '~/assets/activity-book-discipleship.jpg';
-import actSeminarImg from '~/assets/activity-seminars.jpg';
-import actMentorImg from '~/assets/activity-mentoring.jpg';
-import actLeadImg from '~/assets/activity-leadership.jpg';
+import img_1 from '~/assets/tribe-lead-img/tribe-team-1.jpeg';
+import img_2 from '~/assets/tribe-lead-img/tribe-team-2.jpeg';
+import img_3 from '~/assets/tribe-lead-img/tribe-team-3.jpeg';
+import img_4 from '~/assets/tribe-lead-img/tribe-team-4.jpeg';
+import img_5 from '~/assets/tribe-lead-img/tribe-team.jpeg';
+import img_6 from '~/assets/tribe-lead-img/img-1.jpeg';
+import img_7 from '~/assets/tribe-lead-img/img-2.jpeg';
+import img_8 from '~/assets/tribe-lead-img/img-3.jpeg';
+import img_9 from '~/assets/tribe-lead-img/img-4.jpeg';
+import img_10 from '~/assets/tribe-lead-img/img-5.jpeg';
+import img_11 from '~/assets/tribe-lead-img/img-6.jpeg';
+import img_12 from '~/assets/tribe-lead-img/img-7.jpeg';
+import img_13 from '~/assets/tribe-lead-img/img-8.jpeg';
+import img_14 from '~/assets/tribe-lead-img/img-9.jpeg';
+import img_15 from '~/assets/tribe-lead-img/img-10.jpeg';
+import img_16 from '~/assets/tribe-lead-img/img-11.jpeg';
+import img_17 from '~/assets/tribe-lead-img/img-12.jpeg';
+import img_18 from '~/assets/tribe-lead-img/img-13.jpeg';
+import img_19 from '~/assets/tribe-lead-img/img-14.jpeg';
+import img_20 from '~/assets/tribe-lead-img/img-15.jpeg';
+import img_21 from '~/assets/tribe-lead-img/img-16.jpeg';
+import img_22 from '~/assets/tribe-lead-img/img-17.jpeg';
 import heroImg from '~/assets/hero-about.jpg';
 
 const allImages = [
-  { src: actSeminarImg, alt: 'Leadership Seminar', category: 'Seminars' },
-  { src: gallerySchool, alt: 'School Evangelism Program', category: 'Schools' },
-  { src: actBookImg, alt: 'Book Discipleship Session', category: 'Discipleship' },
-  { src: mentoringImg, alt: 'Mentoring Session', category: 'Mentoring' },
-  { src: galleryComm, alt: 'Community Gathering', category: 'Community' },
-  { src: summitImg, alt: 'Youth Summit', category: 'Summits' },
-  { src: actMentorImg, alt: 'One-on-One Coaching', category: 'Mentoring' },
-  { src: corporateImg, alt: 'Corporate Training', category: 'Training' },
-  { src: bookImg, alt: 'Reading & Discussion', category: 'Discipleship' },
-  { src: galleryNetwork, alt: 'Professional Networking', category: 'Training' },
-  { src: seminarImg, alt: 'LeaDTribe Seminar', category: 'Seminars' },
-  { src: actLeadImg, alt: 'Leadership Workshop', category: 'Training' },
-  { src: communityImg, alt: 'Community Outreach', category: 'Community' },
+  { src: img_1, alt: 'Leadership Seminar', category: 'Tribe Team' },
+  { src: img_2, alt: 'School Evangelism Program', category: 'Tribe Team' },
+  { src: img_3, alt: 'Book Discipleship Session', category: 'Tribe Team' },
+  { src: img_4, alt: 'Mentoring Session', category: 'Tribe Team' },
+  { src: img_5, alt: 'Community Gathering', category: 'Tribe Team' },
+  { src: img_6, alt: 'Youth Summit', category: 'Photos' },
+  { src: img_7, alt: 'One-on-One Coaching', category: 'Photos' },
+  { src: img_8, alt: 'Corporate Training', category: 'Photos' },
+  { src: img_9, alt: 'Reading & Discussion', category: 'Photos' },
+  { src: img_10, alt: 'Professional Networking', category: 'Photos' },
+  { src: img_11, alt: 'LeaDTribe Seminar', category: 'Photos' },
+  { src: img_12, alt: 'Leadership Workshop', category: 'Photos' },
+  { src: img_13, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_14, alt: 'Youth Leadership Summit', category: 'Photos' },
+  { src: img_15, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_16, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_17, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_18, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_19, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_20, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_21, alt: 'Community Outreach', category: 'Photos' },
+  { src: img_22, alt: 'Community Outreach', category: 'Photos' },
 ];
 
 const categories = [
   'All',
-  'Seminars',
-  'Schools',
+  'Tribe Team',
+  'Photos',
   'Discipleship',
   'Mentoring',
   'Community',

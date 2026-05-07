@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Init Launch</h1>
+  <h1>Lead Tribe</h1>
   <p><strong>A modern Web App based on Tanstack Starter using React, shadcn/ui and Tailwind CSS 4</strong></p>
   
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
@@ -128,3 +128,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>Built with ❤️ using modern React tools</p>
 </div>
+
+    "vite": "^8.0.2",
+    "vite": "^7.3.1",
