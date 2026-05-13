@@ -14,18 +14,17 @@ import {
 } from 'lucide-react';
 import Layout from '~/components/layout';
 import ScrollReveal from '~/components/scroll-reveal';
-import derrick1 from '~/assets/rev-derrick-img/derrick-1.jpg';
-import derrick3 from '~/assets/rev-derrick-img/derrick-3.jpg';
-import derrick4 from '~/assets/rev-derrick-img/derrick-4.jpg';
-import derrick5 from '~/assets/rev-derrick-img/derrick-5.jpg';
-
-import derrick8 from '~/assets/rev-derrick-img/derrick-6.jpg';
+import leaderSpeaking from '~/assets/rev-derrick-img/derrick-8.jpeg';
+import leaderPortrait from '~/assets/rev-derrick-img/derrick-1.jpeg';
+import leaderSpeaking2 from '~/assets/rev-derrick-img/derrick-2.jpeg';
+import leaderPortrait2 from '~/assets/rev-derrick-img/derrick-6.jpeg';
+import leaderPortrait5 from '~/assets/rev-derrick-img/derrick-5.jpeg';
 
 const heroSlides = [
-  { src: derrick1, title: 'Executive Director', subtitle: 'The LeaDTribe Group' },
-  { src: derrick3, title: 'Corporate Leader', subtitle: 'Bayobab / MTN Group' },
-  { src: derrick8, title: 'Pastor & Speaker', subtitle: 'Kingdom Ministry' },
-  { src: derrick4, title: 'Thought Leader', subtitle: 'Digital Infrastructure' },
+  { src: leaderSpeaking, title: 'Executive Director', subtitle: 'The LeaDTribe Group' },
+  { src: leaderPortrait, title: 'Corporate Leader', subtitle: 'Bayobab / MTN Group' },
+  { src: leaderSpeaking2, title: 'Pastor & Speaker', subtitle: 'Kingdom Ministry' },
+  { src: leaderPortrait2, title: 'Thought Leader', subtitle: 'Digital Infrastructure' },
 ];
 
 const typingTitles = [
@@ -83,16 +82,13 @@ export default function Leader() {
             <img
               src={slide.src}
               alt={`Derrick Senyo Diaba - ${slide.title}`}
-              className="w-full h-full object-contain md:object-cover object-top transition-transform duration-[8000ms] ease-out"
-              style={{
-                transform: i === currentSlide ? 'scale(1.05)' : 'scale(1)',
-                objectPosition: 'center 15%',
-              }}
+              className="w-full h-full object-cover transition-transform duration-8000 ease-out"
+              style={{ transform: i === currentSlide ? 'scale(1.05)' : 'scale(1)' }}
               loading={i === 0 ? 'eager' : 'lazy'}
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
 
         <button
           onClick={() =>
@@ -174,11 +170,19 @@ export default function Leader() {
               <ScrollReveal>
                 <div className="relative">
                   <img
-                    src={derrick5}
-                    alt="Derrick speaking and portrait"
-                    className=" w-full object-cover"
+                    src={leaderPortrait5}
+                    alt="Derrick speaking"
+                    className="rounded-2xl w-full aspect-3/4 object-cover shadow-none"
                     loading="lazy"
                   />
+                  {/* <div className="absolute -bottom-8 -right-4 lg:-right-8 w-2/5">
+                    <img
+                      src={leaderPortrait}
+                      alt="Derrick portrait"
+                      className="rounded-xl w-full aspect-3/4 object-cover shadow-2xl border-4 border-background"
+                      loading="lazy"
+                    />
+                  </div> */}
                   <div className="absolute -top-4 -left-4 lg:-left-6 bg-primary text-primary-foreground rounded-xl p-4 shadow-xl animate-float">
                     <div className="flex items-center gap-2 text-gold text-xs font-semibold">
                       <Award size={16} />
@@ -270,7 +274,7 @@ export default function Leader() {
               Personal <span className="text-gradient-gold">Statement</span>
             </h2>
             <blockquote className="mt-10 relative">
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-gold to-primary rounded-full" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-gold to-primary rounded-full" />
               <div className="pl-8">
                 <p className="text-lg text-muted-foreground leading-relaxed italic">
                   "For me, every connection—whether digital or divine—is an opportunity to transform

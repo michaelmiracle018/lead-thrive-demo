@@ -327,10 +327,12 @@ export default function Index() {
                       <span className="text-xs font-medium">2026</span>
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-xl font-display text-cream">
-                        🔥 CULTIVATING{' '}
-                        <span className="text-gradient-hero">THE GROWTH MINDSET</span>
-                      </h3>
+                      <div className="text-xl lg:text-xl font-display text-cream">
+                        🔥 The Possibility Mindset:{' '}
+                        <span className="text-gradient-hero">
+                          Thinking Beyond Limit, Acting Despite Fear
+                        </span>
+                      </div>
                       <div className="mt-2 flex flex-wrap gap-4 text-sm text-cream/60">
                         <span className="flex items-center gap-1.5">
                           <Calendar size={16} /> May 30, 2026
