@@ -4,11 +4,11 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/gallery')({
   head: () => ({
-    meta: seo({
-      title: 'Gallery – TribeLead',
+    ...seo({
+      title: 'Gallery –  LeadTribe',
       description:
-        'Gallery of TribeLead: Showcasing our events, programs, and community impact through photos and videos.',
-      keywords: 'Gallery, TribeLead, events, programs, community, photos, videos',
+        'Gallery of LeadTribe: Showcasing our events, programs, and community impact through photos and videos.',
+      keywords: 'Gallery, LeadTribe, events, programs, community, photos, videos',
       image: 'https://myapp.com/og/gallery.png',
     }),
   }),

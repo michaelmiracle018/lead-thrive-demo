@@ -4,10 +4,10 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/about')({
   head: () => ({
-    meta: seo({
-      title: 'About – TribeLead',
+    ...seo({
+      title: 'About – LeadTribe',
       description:
-        'About TribeLead: Our mission, vision, and the passionate team driving our community initiatives and social impact.',
+        'About LeadTribe: Our mission, vision, and the passionate team driving our community initiatives and social impact.',
       keywords:
         'Corporate training, youth training, thrive family, students training, book reading',
       image: 'https://myapp.com/og/about.png',

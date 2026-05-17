@@ -4,7 +4,7 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/programs-students')({
   head: () => ({
-    meta: seo({
+    ...seo({
       title: 'TribeLead Programs Students',
       description:
         '                Our student programs are designed to help young people discover their identity, build their faith, and develop leadership skills that will serve them for a lifetime. We work with Junior High Schools, Senior High Schools, and individual students and parents.',

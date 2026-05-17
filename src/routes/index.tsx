@@ -4,7 +4,7 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/')({
   head: () => ({
-    meta: seo({
+    ...seo({
       title: 'Home – Leadtribe',
       description:
         'Building a generation of Christian leaders who lead with vision, integrity, and purpose—transforming every aspect of society with Kingdom values.',

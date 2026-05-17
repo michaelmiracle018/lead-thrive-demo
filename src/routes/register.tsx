@@ -4,7 +4,7 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/register')({
   head: () => ({
-    meta: seo({
+    ...seo({
       title: 'Register – TribeLead',
       description:
         'Register for TribeLead: Join our community and gain access to our resources, events, and initiatives.',

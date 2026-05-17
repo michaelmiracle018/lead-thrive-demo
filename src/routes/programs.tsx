@@ -4,7 +4,7 @@ import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/programs')({
   head: () => ({
-    meta: seo({
+    ...seo({
       title: 'Programs – TribeLead Programs',
       description:
         'Program TribeLead: Our mission, vision, and the passionate team driving our community initiatives and social impact.',

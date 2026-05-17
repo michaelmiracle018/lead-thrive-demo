@@ -5,9 +5,6 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import type * as React from 'react';
 import { Toaster } from 'sonner';
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary';
-// import { ThemeInitScript } from '~/components/theme-init-script';
-// import { ThemeProvider } from '~/components/theme-provider';
-// import type { Theme } from '~/lib/theme';
 import { seo } from '~/utils/seo';
 import appCss from '../styles/app.css?url';
 import customCss from '../styles/custom.css?url';
@@ -33,25 +30,36 @@ export const Route = createRootRouteWithContext<{
     };
   },
 
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ...seo({
-        title: 'Instructa Start',
-        description: 'Building better applications, faster with Instructa Start',
-      }),
-    ],
-    links: [
-      { rel: 'stylesheet', href: appCss },
-      { rel: 'stylesheet', href: customCss },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-      { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
-      { rel: 'icon', href: '/favicon.ico' },
-    ],
-  }),
+  head: () => {
+    // 1. Process your SEO utility and intercept the returned object structure
+    const seoData = seo({
+      title: 'Leadtribe',
+      description:
+        'Building a generation of Christian leaders who lead with vision, integrity, and purpose.',
+      image: '/assets/logo-B1zdFssq.jpg',
+      path: '/',
+    });
+
+    return {
+      // 2. Destructure and safely map into your core meta array
+      meta: [
+        { charSet: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        ...(seoData.meta || []),
+      ],
+      // 3. Keep your global icons/stylesheets and safely append your canonical paths
+      links: [
+        { rel: 'stylesheet', href: appCss },
+        { rel: 'stylesheet', href: customCss },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
+        { rel: 'icon', href: '/favicon.ico' },
+        ...(seoData.links || []),
+      ],
+    };
+  },
 
   errorComponent: (props) => (
     <RootDocument>
